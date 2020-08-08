@@ -5,7 +5,7 @@
         <div class="post">
             <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
             <div class="date">
-                <p>published: {{ post.published_date }}</p>
+                <span class="glyphicon glyphicon-book"></span> {{ post.published_date }}
             </div>
             <div class="text">
             <p>{{ post.text|linebreaksbr }}</p>
