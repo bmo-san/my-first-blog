@@ -6,11 +6,11 @@
             <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
             
             <div class="date">
-                <span class="glyphicon glyphicon-book"></span> {{ post.published_date }}
+                <span class="glyphicon glyphicon-book"></span> {{ post.created_date|date:'d-m-Y' }}
             </div>
             
             <div class="text">
-                <p>{{ post.text|linebreaksbr }}</p>
+                <p>{{ post.text|truncatechars:200 }}</p>
             </div>
         </div>
     {% endfor %}
